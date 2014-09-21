@@ -1,4 +1,3 @@
-#require 'fileutils'
 module Mp4Renamer
   module Errors
     InvalidInputFileError = Class.new(StandardError)

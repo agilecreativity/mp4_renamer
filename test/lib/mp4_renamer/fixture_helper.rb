@@ -30,16 +30,3 @@ module Mp4Renamer
     end
   end
 end
-
-if __FILE__ == $0
-  require 'pry'
-  require 'awesome_print'
-  include Mp4Renamer
-
-  helper = FixtureHelper.new
-
-  helper.setup
-  samples = helper.sample_files
-  puts samples
-  helper.teardown
-end

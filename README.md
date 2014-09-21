@@ -57,7 +57,7 @@ mp4_renamer --base-dir . --recursive
 mp4_renamer -b . -r
 ```
 
-Shous show outputs similar to the following
+Should show outputs similar to the following
 
 ```
 FYI: your options {:base_dir=>".", :recursive=>true, :commit=>false, :version=>false}
