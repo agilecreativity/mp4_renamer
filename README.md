@@ -124,4 +124,4 @@ include Mp4Renamer
 [Pry]: https://github.com/pry/pry
 [Rubocop]: https://github.com/bbatsov/rubocop
 [Grit]: https://github.com/mojombo/grit
-[filenamer_cleaner]: https://github.com/agilecreativity/filename_cleaner
+[filename_cleaner]: https://github.com/agilecreativity/filename_cleaner
