@@ -28,4 +28,15 @@ describe Mp4Renamer do
       end
     end
   end
+
+  describe '#rename_once?' do
+    it 'returns false if not already rename' do
+      refute(renamer.rename_once?('sample.mp4'))
+      refute(renamer.rename_once?('sample_12_34.mp4'))
+    end
+
+    it 'returns true if already rename' do
+      assert(renamer.rename_once?('sample_12_34_12_34.mp4'))
+    end
+  end
 end

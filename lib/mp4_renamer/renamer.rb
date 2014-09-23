@@ -20,7 +20,8 @@ module Mp4Renamer
     # @param [String] sep_string the separator string to use default to '_' underscore
     # @raise [Errors::InvalidInputFileError] if the file is not valid or not readable
     # @example
-    #   # if the running time for the `sample.mp4` is '06:10' minutes
+    #   If the running time for the `sample.mp4` is '06:10' minutes
+    #
     #   rename("/path/to/sample.mp4")         #=> will rename the file to '/path/to/sample_06.10.mp4'
     #   rename("/path/to/bad-input-file.mp4") #=> will raise error
     def rename(filename, sep_string = '_')
@@ -46,11 +47,25 @@ module Mp4Renamer
 
       new_name = "#{base_name}#{sep_string}#{running_time}#{ext_name}"
       output_file = [ dir_name, new_name ].join(File::SEPARATOR)
-      # now let rename the file
-      FileUtils.mv filename, output_file if commit
 
-      puts "FYI: output file: #{output_file}"
+      if rename_once?(output_file) || File.exist?(output_file)
+        puts "FYI: output file: #{filename} already exist, no action required!"
+      else
+        FileUtils.mv filename, output_file if commit
+        puts "FYI: output file: #{output_file}"
+      end
       output_file
+    end
+
+    # Return true if the file has already been renamed
+    # @param [String] filename the input file name
+    # @example
+    #   rename_once?("some_file.mp4")             == false
+    #   rename_once?("some_file_12_34.mp4")       == false
+    #   rename_once?("some_file_12_34_12_34.mp4") == true
+    def rename_once?(filename)
+      basename = File.basename(filename, File.extname(filename))
+      basename.match(/^(.*)_(\d+)_(\d+)_\2_\3$/)
     end
   end
 end

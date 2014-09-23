@@ -1,5 +1,9 @@
 ### Changelogs
 
+#### 0.1.3
+
+- Prevent the files from being rename more than once
+
 #### 0.1.2
 
 - Code cleanup
