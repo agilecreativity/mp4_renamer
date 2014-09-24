@@ -1,4 +1,3 @@
-require 'fileutils'
 module Mp4Renamer
   class FixtureHelper
     attr_reader :fixture_files,

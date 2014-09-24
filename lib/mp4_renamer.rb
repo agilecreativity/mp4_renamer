@@ -5,8 +5,7 @@ require 'thor'
 require 'fileutils'
 require 'mp4info'
 require 'code_lister'
-
-require_relative 'mp4_renamer/version'
-require_relative 'mp4_renamer/cli'
-require_relative 'mp4_renamer/renamer'
+require 'mp4_renamer/version'
+require 'mp4_renamer/cli'
+require 'mp4_renamer/renamer'
 include Mp4Renamer

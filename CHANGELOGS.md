@@ -1,5 +1,10 @@
 ### Changelogs
 
+#### 0.1.4
+
+- Use `require` instead of `require_relative`
+- Update gem's dependencies
+
 #### 0.1.3
 
 - Prevent the files from being rename more than once

@@ -4,6 +4,7 @@ require 'minitest/pride'
 require 'minitest-spec-context'
 require 'pry'
 require 'awesome_print'
+require 'fileutils'
 require_relative '../lib/mp4_renamer'
 require_relative './lib/mp4_renamer/fixture_helper'
 include Mp4Renamer

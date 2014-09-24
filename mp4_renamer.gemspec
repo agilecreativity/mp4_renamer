@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['agilecreativity@gmail.com']
   spec.summary       = %q{Simple gem to rename mp4 and m4a files by adding running time to the filename using embeded metadata}
   spec.description   = %q{Rename the mp4 and m4a files by adding the running time to the end of the filename
-                          TL;DR; rename 'some_media_file.mp4' to 'media_file_12_34.mp4' if the running time is '12:34' minutes}
+                          TL;DR rename 'media_file.mp4' to 'media_file_12_34.mp4' if the running time is '12:34' minutes}
   spec.homepage      = 'https://github.com/agilecreativity/mp4_renamer'
   spec.required_ruby_version = ">= 1.9.3"
   spec.license       = 'MIT'
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'activesupport-core-ext', '~> 4.0.0.2'
   spec.add_runtime_dependency 'thor', '~> 0.19.1'
   spec.add_runtime_dependency 'mp4info', '~> 1.7.3'
-  spec.add_runtime_dependency 'code_lister', '~> 0.2.2'
+  spec.add_runtime_dependency 'code_lister', '~> 0.2.4'
 
   spec.add_development_dependency 'awesome_print', '~> 1.2.0'
   spec.add_development_dependency 'bundler', '~> 1.7.3'
@@ -30,9 +30,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'guard-minitest', '~> 2.3.1'
   spec.add_development_dependency 'minitest', '~> 5.4.0'
   spec.add_development_dependency 'minitest-spec-context', '~> 0.0.3'
-  spec.add_development_dependency 'pry', '~> 0.10.0'
+  spec.add_development_dependency 'pry', '~> 0.10.1'
   spec.add_development_dependency 'pry-byebug', '~> 1.3.3' if RUBY_VERSION >= '2.0.0'
   spec.add_development_dependency 'rake', '~> 10.3.2'
-  spec.add_development_dependency 'rubocop', '~> 0.24.0'
+  spec.add_development_dependency 'rubocop', '~> 0.26.0'
   spec.add_development_dependency 'yard', '~> 0.8.7'
 end

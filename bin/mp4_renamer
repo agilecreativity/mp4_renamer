@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require_relative '../lib/mp4_renamer'
-include Mp4Renamer
 if ARGV.empty?
   Mp4Renamer::CLI.start(%w[usage])
 else
