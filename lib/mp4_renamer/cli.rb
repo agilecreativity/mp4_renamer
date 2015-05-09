@@ -55,7 +55,7 @@ Execute the main program
     def process(opts = {})
       puts "FYI: your options #{opts.inspect}"
       # Note: currently `mp4info` gem supports only two extensions
-      opts.merge!(exts: %w(mp4 m4a))
+      opts.merge!(exts: %w(mp4 m4a MP4 M4A))
       files = CodeLister.files(opts)
 
       if files.empty?

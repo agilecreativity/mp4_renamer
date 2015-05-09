@@ -1,5 +1,10 @@
 ### Changelogs
 
+#### 0.1.5
+
+- Ignore the case when scanning for input files
+- Update gem dependencies to most recent version
+
 #### 0.1.4
 
 - Use `require` instead of `require_relative`
