@@ -1,5 +1,10 @@
 ### Changelogs
 
+#### 0.1.6
+
+- Replace deprecated gem
+- Use optimistic versionging in gemspec file
+
 #### 0.1.5
 
 - Ignore the case when scanning for input files

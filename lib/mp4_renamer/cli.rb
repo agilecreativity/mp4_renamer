@@ -20,7 +20,7 @@ module Mp4Renamer
                   desc:    'Display version number',
                   default: false
     def execute
-      opts = options.symbolize_keys
+      opts = options.deep_symbolize_keys
       if opts[:version]
         puts "You are using Mp4Renamer version #{Mp4Renamer::VERSION}"
         exit
